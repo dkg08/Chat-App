@@ -1,0 +1,32 @@
+
+.chatWindow {
+    background-color: white;
+    height:66vh;
+    width: 44vh;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+.chatWindow .topSection {
+    widht: 100%;
+    background-color: #E6B9DE;
+    height: 10%;
+    padding: 6px 6px;
+    color: white
+}
+
+.chatWindow .messageSection{
+    width: 100%;
+    background-color: white;
+    height: 80%;
+    background-color: #FAE7F3;
+}
+.chatWindow .bottomSection{
+    width: 100%;
+    /* background-color: yellow; */
+    height: 10%;
+   
+}
