@@ -10,17 +10,23 @@ app.use(express.json());
 app.use(cors());
 
 const server = http.createServer(app);
-const io = new Server(server,{
-  cors:{
-    origin:"*"
-  }
+const io = new Server(server, {
+  cors: {
+    origin: "*",
+  },
 });
-
-
 
 io.on("connection", (socket) => {
   console.log("a new user connected");
-  
+
+  socket.on("join-room", (room) => {
+    socket.join(room);
+    console.log(`a user joined room ${room}`);
+  });
+
+  socket.on("chat message", (msg) => {
+    socket.to(msg.roomId).emit("receive msg", msg);
+  });
 
   socket.on("disconnect", () => {
     console.log("user disconnected");
