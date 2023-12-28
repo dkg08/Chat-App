@@ -19,15 +19,16 @@ Prerequisites
 Node.js and npm installed
 Installation
 Clone the repository:
-bash
+```bash
 Copy code
 git clone https://github.com/yourusername/Chat-App.git
 Navigate to the project directory:
-bash
+```bash
 Copy code
 cd Chat-App
+```
 Install dependencies for both frontend and backend:
-bash
+```bash
 Copy code
 # Install frontend dependencies
 cd frontend
@@ -36,21 +37,24 @@ npm install
 # Install backend dependencies
 cd ../backend
 npm install
+```
 Running the Application
 Start the backend server:
 
-bash
+```bash
 Copy code
 cd backend
 npm start
+```
 The server will start at your PORT. eg:http://localhost:5000.
 
 Start the frontend application:
 
-bash
+```bash
 Copy code
 cd frontend
 npm run dev
+```
 The React development server will start at http://localhost:5173
 
 Open your browser and go to http://localhost:5173 to view the chat application.
