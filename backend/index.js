@@ -25,7 +25,8 @@ io.on("connection", (socket) => {
   });
 
   socket.on("chat message", (msg) => {
-    socket.to(msg.roomId).emit("receive msg", msg);
+    const myMessage = JSON.parse(msg);
+    socket.to(myMessage.roomId).emit("receive-msg", msg);
   });
 
   socket.on("disconnect", () => {

@@ -1,32 +1,89 @@
-
 .chatWindow {
-    background-color: white;
-    height:66vh;
-    width: 44vh;
-    border-radius: 8px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-
-  }
+  background-color: white;
+  height: 66vh;
+  width: 44vh;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
 
 .chatWindow .topSection {
-    widht: 100%;
-    background-color: #E6B9DE;
-    height: 10%;
-    padding: 6px 6px;
-    color: white
+  widht: 100%;
+  background-color: #e6b9de;
+  height: 10%;
+  padding: 6px 6px;
+  color: white;
 }
 
-.chatWindow .messageSection{
-    width: 100%;
-    background-color: white;
-    height: 80%;
-    background-color: #FAE7F3;
+.chatWindow .messageSection {
+  width: 100%;
+  background-color: white;
+  height: 80%;
+  background-color: #fae7f3;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
-.chatWindow .bottomSection{
-    width: 100%;
-    /* background-color: yellow; */
-    height: 10%;
-   
+.chatWindow .bottomSection {
+  width: 100%;
+  /* background-color: yellow; */
+  height: 10%;
+}
+
+.chatWindow .messageSection .message .message-content {
+  width: auto;
+  height: auto;
+  min-height: 40px;
+  max-width: 120px;
+  background-color: #43a047;
+  border-radius: 12px;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  margin: 0 8px;
+  padding: 0 8px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+#you {
+  justify-content: flex-end;
+}
+
+#you .message-content {
+  text-align: start;
+}
+
+#you .message-meta {
+  justify-content: flex-end;
+  margin-left: 8px;
+}
+
+#other {
+  justify-content: flex-start;
+}
+
+#other .message-content {
+  justify-content: flex-start;
+  background-color: cornflowerblue;
+}
+
+#other .message-meta {
+  justify-content: flex-start;
+  margin-right: 8px;
+}
+
+.message-meta #time {
+  /* font-weight: bold; */
+  font-size: 10px;
+  margin-top: 2px;
+}
+.message-meta #author {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.chat-window .chat-body .message .message-meta {
+  display: flex;
+  font-size: 12px;
 }
